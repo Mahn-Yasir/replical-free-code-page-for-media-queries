@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="freecodecamp.css">
+         <title>free code camp</title>            
+    </head>
+    <body>
+       <div class="heading1">
+        <input type="text" placeholder="search 7,400+tutorials">
+        <div class="freeCodeCamp"><h1>FreeCampCode() </h1></div>
+        <button class="btn1"><b>Forum</b></button>
+        <button class="btn2"><b>Donate</b></button>
+       </div><br>
+       <div class="heading2">
+        <h3>Learn to code-</h3>
+        <a href="#">free 3,000-hour curiculum</a>
+       </div><br><br>
+       <div class="page">
+        <div class="page_container">
+          <br><br><br><br><br><p>April 8,2020 /<span>#responsive design</span></p>
+            <div class="image2">
+              <img src="cem Eygi.jpg" alt="image" class="img1">
+              <p>Cem Eygi</p>
+            </div>
+          <h1>Meadia query css tutorial-Standard<br>
+           Resolution,Css Breakpoint,Target<br>
+           Phone sizes<br>
+          </h1>
+          <img src="5f9c9bb5740569d1a4ca2d74.jpg" alt="image" class="img2">
+          
+          <p class="text">In the past, building a website was much simpler. Today a<br>
+           websites layout should adapt itself not only to computers,<br>
+            but also tablets, mobile devices, and even TVs.<br>
+            <br>
+          Making a website with an adaptable layout is called Responsive Web<br>
+           Design. And CSS Media Queries are one of the most important parts of<br>
+            Responsive Design. In this article, we are going to take a closer look at<br>
+             Media Queries and how to use them in CSS.<br>
+             <br>
+          If you prefer, you can watch the video version below:</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/P_vkS4UJNDk?si=ENBKcr6F07sZ8kk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h1>What is a Media Query?</h1>
+          
+           <p class="text"> A Media query is a CSS3 feature that makes a webpage adapt its layout to<br>
+             different screen sizes and media types.</p><br>
+             <h1>Syntax</h1>
+             <p class="text3"><span>@media meadia type and</span> (<span class="sp1">condition</span>:<span>breakpoint</span>){<br>
+              //css rules  <br>
+            }
+            <p>We can target different media types under a variety of conditions. If the<br>
+               condition and/or media types meet, then the rules inside the media query<br>
+                will be applied, otherwise, they won’t.</p><br>
+                <p>The syntax may seem complicated at the beginning, so let’s explain each<br>
+                   part one by one in detail…</p><br>
+                   <h1>@ Media Rule</h1>
+                   <p>We start defining media queries with @media rule and later include CSS<br>
+                     rules inside the curly braces. The @ media rule is also used to specify target<br>
+                      media types.</p><br>
+                      <p class="text3"><span>@meadia</span> (){<br>
+                        //css rules<br>
+                      }
+                      </p><br>
+                      <h1>Parenthesis</h1>
+                      <p>Inside the parenthesis, we set a condition. For example, I want to apply a<br>
+                         larger font size for mobile devices. To do that, we need to set a maximum<br>
+                          width which checks the width of a device:</p><br>
+                          <p class="text4"><span class="sp3">.text</span> {<br>
+                            <span class="sp1">font-size</span> 14px;<br>
+                          }<br>
+                          <span>@media</span> (<span class="sp1">max-width</span>: <span>480px</span>) {<br>
+                            <span class="sp3">.text</span> {<br>
+                              <span class="sp1">font-size</span> 16px;<br>
+                            }<br>
+                          }</p><br>
+                          <p>Normally, the text size will be 14px. However since we applied a media <br>
+                            query, it will change to 16px when a device has a maximum width of 480px<br>
+                             or less.<br></p>
+                            <p>Important: Always put your media queries at the end of your CSS file.<br></p>
+                            <br>
+                             <h1>Media Types</h1>
+                            <p>If we don’t apply a media type, the @ media rule selects all types of devices<br>
+                               by default. Otherwise, Media types come right after the @ media rule.<br>
+                                There are many kinds of devices but we can group them into 4 categories:<br>
+                            </p>
+                            <ul class="ul">
+                              <li>all — for all media types</li>
+                              <li>print — for printers</li>
+                              <li>screen — for computer screens, tablets and, smart-phones</li>
+                              <li>speech — for screen readers that “read” the page out loud</li><br>
+                            </ul>
+                              <p>For example, when I want to select only screens, I will set the screen<br>
+                                keyword right after the @ media rule. I also must concatenate the rules with<br>
+                                 the “and” keyword:<br></p>
+                                 <p class="text5"><span>@media screen and</span> (<span class="sp1">max-width</span> <span>480px</span>) {<br>
+                                  <span class="sp3">.text</span> {<br>
+                                    <span class="sp1">font-size</span> 16px;<br>
+                                  }<br>
+                                 }</p><br>
+                                 <h1>Breakpoints</h1>
+                                 <p>Breakpoints are maybe the most common term you will hear and use. A<br>
+                                   breakpoint is a key to determine when to change the layout and adapt the<br>
+                                    new rules inside the media queries. Let’s go back to our example at the<br>
+                                     beginning:</p><br>
+                                     <p class="text5"><span>@media</span> (<span class="sp1">max-width</span> <span>480px</span>) {<br>
+                                      <span class="sp3">.text</span> {<br>
+                                        <span class="sp1">font-size</span> 16px;<br>
+                                      }<br>
+                                     }</p><br>
+                                     <p>Here, the breakpoint is 480px. Now the media query knows when to set or<br>
+                                       overwrite the new class. Basically, if the width of a device is smaller than<br>
+                                       480px, the text class will be applied, otherwise, it won’t.</p><br>
+                                       <h2>Common Breakpoints: Is there a Standard Resolution?</h2>
+                                       <p>One of the most commonly asked questions is “Which breakpoint should I<br>
+                                         use?”. There are a ton of devices on the market so we can’t and we shouldn’t<br>
+                                         define fixed breakpoints for each of them.</p><br>
+                                         <p>That’s why we can’t say that there is a standard resolution for devices, but<br>
+                                           there are some commonly used breakpoints in daily programming. If you’re<br>
+                                            using a CSS framework (like Bootstrap, Bulma, etc.) you can also use their<br>
+                                           breakpoints.</p><br>
+                                           <p>Now let’s see some common breakpoints for widths of devices:</p><br>
+                                           <ul class="ul">
+                                            <li>320px — 480px: Mobile devices</li>    
+                                              <li>481px — 768px: iPads, Tablets</li>
+                                              <li>769px — 1024px: Small screens, laptops</li>
+                                              <li>1025px — 1200px: Desktops, large screens</li>
+                                              <li>1201px and more —  Extra large screens, TV</li>
+                                           </ul>
+                                           <p>As I said above, these breakpoints can differ and there is no standard<br>
+                                             exactly defined, but these are some commonly used ones.</p><br>
+                                             <h1>Wrapping up</h1>
+                                             <p>Responsive Design is a must in today’s web design and development field.<br>
+                                               Media queries are one of the most important parts of building responsive<br>
+                                                layouts, and I hope you find my post helpful for understanding how media<br>
+                                                 queries work.<br>
+                                                 <p>If you want to learn more about web development, feel free to <a href="#" class="hr2">subscribe</a><br>
+                                                   <a href="#" class="hr2">to my channel</a></p><br>
+                                                   <p>Thank you for reading!</p><br>
+                                                   <br>
+                                                   <hr>
+                                                   <div class="image2">
+                                                    <img src="cem Eygi.jpg" alt="image" class="img1">
+                                                    <h3>Cem Eygi</h3>
+                                                    <p></p>
+                                                   </div>
+                                                   <hr>
+                                                   <div class="conclusion">
+                                                    <p> If you read this far, thank the author to show them you care. </p>
+                                                   <button class="btn3"><b>Say Thanks</b></button>
+                                                   </div>
+                                                   
+                                                    <p>Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get</p>
+                                                      <div class="conclusion">
+                                                      <p>jobs as developers. </p>
+                                                      <button class="btn4"><b>Get Started</b></button>
+                                                    </div>
+                                                     <Div class="ad">
+                                                      <h2>ADVERTISEMENT</h2>
+                                                     </Div><br><br>
+                                                     <footer class="last_table">
+                                                      <section class="section1">
+                                                       
+                                                          freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United<br>
+                                                           States Federal Tax Identification Number: 82-0779546)<br><br>
+    
+    Our mission: to help people learn to code for free. We accomplish this by creating<br>
+     thousands of videos, articles, and interactive coding lessons - all freely available to the<br> public.<br><br>
+    
+    Donations to freeCodeCamp go toward our education initiatives, and help pay for<br>
+     servers, services, and staff.<br><br>
+    <div class="donation_link"> <b>You can <a class="link" href link="https://google.com/">make a tax-deductible donation here.</a></b>
+     </div>
+                                                         
+                                                      </section>
+                                                      <div class="links">
+                                                        <section class="section1">
+                                                          <h3 class="h3last">Trending Guides</h3>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn css transform</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">What is programming?</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">HTTP Networking in JS</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">How to write clean code</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Swift</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn CSS Grid</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn JS Modules</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Front-End JS<br>Development</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Command Lines For<br>Beginners</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">OSS Security Best<br>Practice</a><br>
+    
+    
+                                                          </section>
+                                                          <section class="section1">
+                                                            <a href="https://www.freecodecamp.org/news/">Build a Static Blog</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Python Code Examples</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Write React Unit Tests</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Leaarn PHP</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Golang</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Solidity</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Apache Kafka</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn to Build REST APIs</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Distributed System Patterns</a><br>
+    
+                                                          </section>
+                                                          <section class="section1">
+                                                            <a href="https://www.freecodecamp.org/news/">Build AI Chatbot</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Open Source for Devs</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Algorithms in JS</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Java</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Node.JS</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn Expresss.JS</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">REST API Best Practices</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Intermidate TS and React</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Learn to Build GraphQL<br>APIs</a><br>
+                                                            <a href="https://www.freecodecamp.org/news/">Software Architecture<br> Patterns </a><br>
+                                                          </section>
+                                                          
+                                                      </div>
+                                                        
+          </footer>
+          <hr>
+                                                      
+        </div>
+       </div>
+      </body>
+      </html>
